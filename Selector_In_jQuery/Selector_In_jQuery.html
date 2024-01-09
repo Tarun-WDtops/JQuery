@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector in jQuery</title>
+  </head>
+  <body>
+    <h1>Selector in jQuery</h1>
+
+    <p>JaiHind Ki Senaa</p>
+
+    <button id="btnID">Click</button>
+    <button class="btnClass">Click</button>
+
+    <script src="../Js Library/jquery-3.7.1.min.js"></script>
+
+    <script>
+      // Element Selector
+
+      $("p").click(function () {
+        alert("Hey This is Element Selector");
+        console.log("Element Selector");
+      });
+
+      // Class Selector
+
+      $(".btnClass").click(function () {
+        alert("Hey This is Class Selector");
+        console.log("Class Selector");
+      });
+
+      // ID Selector
+
+      $("#btnID").click(function () {
+        alert("Hey This is ID Selector");
+        console.log("ID Selector");
+      });
+    </script>
+  </body>
+</html>
