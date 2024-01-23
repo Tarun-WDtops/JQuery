@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS in jQuery</h1>
+
+    <button class="FadeInbtn">FadeIn</button>
+    <button class="FadeOutbtn">FadeOut</button>
+    <button class="FadeTogglebtn">FadeToggle</button>
+    <button class="FadeTobtn">FadeTo</button>
+
+    <div class="box"></div>
+
+    <script src="../../Practice/Js Library/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("body").css({
+        backgroundColor: "white",
+        color: "white",
+        textAlign: "center",
+      });
+
+      $("h1").css({
+        color: "black ",
+      });
+
+      $(".box").css({
+        width: "300px",
+        height: "300px",
+        borderRedius: "50px",
+        border: "2px solid black",
+        margin: "0 auto",
+        marginTop: "10px",
+        backgroundColor: "orange",
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Fade In
+
+        $(".FadeInbtn").click(function () {
+          $(".box").fadeIn(2000);
+        });
+
+        // Fade Out
+
+        $(".FadeOutbtn").click(function () {
+          $(".box").fadeOut(2000);
+        });
+
+        // Fade Toggle
+
+        $(".FadeTogglebtn").click(function () {
+          $(".box").fadeToggle(1000);
+        });
+
+        // Fade To
+
+        $(".FadeTobtn").click(function () {
+          $(".box").fadeTo(2000, 0.25);
+        });
+      });
+    </script>
+  </body>
+</html>

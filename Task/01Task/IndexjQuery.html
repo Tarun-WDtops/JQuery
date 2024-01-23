@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS in jQuery</h1>
+
+    <button class="btnShow">SHOW</button>
+    <button class="btnHide">HIDE</button>
+    <button class="btnToggle">TOGGLE</button>
+
+    <div class="Image">
+      <img class="photo" src="../../Image/photo8.jpg" alt="" />
+    </div>
+
+    <script src="../../Practice/Js Library/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("body").css({
+        backgroundColor: "black",
+        color: "white",
+        textAlign: "center",
+      });
+
+      $(".photo").css({
+        width: "700px",
+        marginTop: "9px",
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // SHow
+
+        $(".btnShow").click(function () {
+          $(".Image").show();
+        });
+
+        // HIde
+
+        $(".btnHide").click(function () {
+          $(".Image").hide();
+        });
+
+        // Toggle
+
+        $(".btnToggle").click(function () {
+          $(".Image").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

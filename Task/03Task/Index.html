@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS in jQuery</h1>
+
+    <button class="FadeInbtn">FadeIn</button>
+    <button class="FadeOutbtn">FadeOut</button>
+    <button class="FadeTogglebtn">FadeToggle</button>
+    <button class="FadeTobtn">FadeTo</button>
+
+    <div class="Image">
+      <img class="photo" src="../../Image/photo8.jpg" alt="" />
+    </div>
+
+    <script src="../../Practice/Js Library/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $("body").css({
+        backgroundColor: "black",
+        color: "white",
+        textAlign: "center",
+      });
+
+      $(".photo").css({
+        width: "700px",
+        marginTop: "9px",
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Fade In
+
+        $(".FadeInbtn").click(function () {
+          $(".Image").fadeIn(2000);
+        });
+
+        // Fade Out
+
+        $(".FadeOutbtn").click(function () {
+          $(".Image").fadeOut(2000);
+        });
+
+        // Fade Toggle
+
+        $(".FadeTogglebtn").click(function () {
+          $(".Image").fadeToggle(1000);
+        });
+
+        // Fade To
+
+        $(".FadeTobtn").click(function () {
+          $(".Image").fadeTo(2000, 0.25);
+        });
+      });
+    </script>
+  </body>
+</html>
