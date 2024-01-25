@@ -8,10 +8,7 @@
   <body>
     <h1>CSS in jQuery</h1>
 
-    <button class="FadeInbtn">FadeIn</button>
-    <button class="FadeOutbtn">FadeOut</button>
-    <button class="FadeTogglebtn">FadeToggle</button>
-    <button class="FadeTobtn">FadeTo</button>
+    <button class="ani">Animation</button>
 
     <div class="box"></div>
 
@@ -29,9 +26,9 @@
       });
 
       $(".box").css({
-        width: "300px",
-        height: "300px",
-        borderRedius: "50px",
+        width: "200px",
+        height: "200px",
+
         border: "2px solid black",
         margin: "0 auto",
         marginTop: "10px",
@@ -39,31 +36,17 @@
       });
     </script>
 
-
     <script>
       $(document).ready(function () {
-        // Fade In
-
-        $(".FadeInbtn").click(function () {
-          $(".box").fadeIn(2000);
-        });
-
-        // Fade Out
-
-        $(".FadeOutbtn").click(function () {
-          $(".box").fadeOut(2000);
-        });
-
-        // Fade Toggle
-
-        $(".FadeTogglebtn").click(function () {
-          $(".box").fadeToggle(1000);
-        });
-
-        // Fade To
-
-        $(".FadeTobtn").click(function () {
-          $(".box").fadeTo(2000, 0.25);
+        $(".ani").click(function () {
+          $(".box").animate({
+            width: "350px",
+            height: "350px",
+            borderRadius: "70px",
+          });
+          $("h1").animate({
+            fontSize: "50px",
+          });
         });
       });
     </script>
