@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+      }
+      img {
+        width: 100%;
+      }
+      .box {
+        width: 400px;
+      }
+      .box01 {
+        width: 400px;
+      }
+      .box02 {
+        width: 400px;
+      }
+      .firstbtn {
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: khaki;
+      }
+      .secondbtn {
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: khaki;
+      }
+      .thirdtbtn {
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img src="../../Image/photo1.jpg" alt="" />
+        <button type="button" class="firstbtn">First-Hover</button>
+      </div>
+      <div class="box01">
+        <img src="../../Image/photo2.jpg" alt="" />
+        <button type="button" class="secondbtn">Second-Hover</button>
+      </div>
+      <div class="box02">
+        <img src="../../Image/photo3.jpg" alt="" />
+        <button type="button" class="thirdtbtn">Third-Hover</button>
+      </div>
+    </div>
+
+    <!-- jQuery CDN is here -->
+    <script src="../Js Library/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery written is here -->
+    <script>
+      $(document).ready(function () {
+        $(".firstbtn").click(function () {
+          $(".box").css({
+            paddingBottom: "100px",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
