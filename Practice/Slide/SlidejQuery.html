@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slidde</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Slide in jQuery</h1>
+      <button type="button" class="upbtn">SLide Up</button>
+      <button type="button" class="downbtn">SLide Down</button>
+      <button type="button" class="togglebtn">SLide Toggle</button>
+
+      <div class="box"></div>
+    </div>
+
+    <!-- jQuery added is here -->
+    <script src="../Js Library/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery CSS is here -->
+    <script>
+      $("*").css({
+        margin: "0",
+        padding: "0",
+        boxSizing: "border-box",
+      });
+
+      $("body").css({
+        backgroundColor: "black",
+        // textAlign: "center",
+      });
+
+      $(".box").css({
+        width: "300px",
+        height: "300px",
+        borderRadius: "50px",
+        backgroundColor: "crimson",
+        border: "2px solid aliceblue",
+        marginTop: "50px",
+      });
+
+      $("button").css({
+        width: "100px",
+        height: "40px",
+        borderRadius: "30px",
+        backgroundColor: "khaki",
+      });
+    </script>
+
+    <!-- jquery written is here -->
+    <script>
+      $(document).ready(function () {
+        // Slide Up
+
+        $(".upbtn").click(function () {
+          $(".box").slideUp(3000);
+        });
+
+        // Slide Up
+
+        $(".downbtn").click(function () {
+          $(".box").slideDown(3000);
+        });
+
+        // Slide Up
+
+        $(".togglebtn").click(function () {
+          $(".box").slideToggle(3000);
+        });
+      });
+    </script>
+  </body>
+</html>
