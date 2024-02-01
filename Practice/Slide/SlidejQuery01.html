@@ -24,39 +24,28 @@
       .box02 {
         width: 400px;
       }
-      .firstbtn {
+      button {
         width: 150px;
         height: 30px;
         border-radius: 20px;
         background-color: khaki;
-      }
-      .secondbtn {
-        width: 150px;
-        height: 30px;
-        border-radius: 20px;
-        background-color: khaki;
-      }
-      .thirdtbtn {
-        width: 150px;
-        height: 30px;
-        border-radius: 20px;
-        background-color: khaki;
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="box">
-        <img src="../../Image/photo1.jpg" alt="" />
         <button type="button" class="firstbtn">First-Hover</button>
+        <img src="../../Image/photo1.jpg" alt="" />
       </div>
       <div class="box01">
-        <img src="../../Image/photo2.jpg" alt="" />
         <button type="button" class="secondbtn">Second-Hover</button>
+        <img src="../../Image/photo2.jpg" alt="" />
       </div>
       <div class="box02">
-        <img src="../../Image/photo3.jpg" alt="" />
         <button type="button" class="thirdtbtn">Third-Hover</button>
+        <img src="../../Image/photo3.jpg" alt="" />
       </div>
     </div>
 
@@ -66,7 +55,7 @@
     <!-- jQuery written is here -->
     <script>
       $(document).ready(function () {
-        $(".firstbtn").click(function () {
+        $(".firstbtn").hover(function () {
           $(".box").css({
             paddingBottom: "100px",
           });
