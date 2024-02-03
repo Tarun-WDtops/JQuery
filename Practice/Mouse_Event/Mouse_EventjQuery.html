@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 3px solid white;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Mouse Event</h1>
+
+      <div class="box"></div>
+    </div>
+
+    <!-- jQuery CDN is here -->
+    <script src="../Js Library/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Click
+        $(".box").click(function () {
+          $(".box").css({
+            backgroundColor: "white",
+            borderRadius: "50px",
+            marginLeft: "900px",
+          });
+        });
+        //Double Click
+        $(".box").dblclick(function () {
+          $(".box").css({
+            backgroundColor: "violet",
+            borderRadius: "50px",
+            marginLeft: "600px",
+          });
+        });
+        //Mouse Enter
+        $(".box").mouseenter(function () {
+          $(".box").css({
+            backgroundColor: "khaki",
+            borderRadius: "50px",
+            marginLeft: "500px",
+          });
+        });
+        //   Mouse Up
+        $(".box").mouseup(function () {
+          $(".box").css({
+            backgroundColor: "brown",
+            borderRadius: "50px",
+            marginLeft: "600px",
+          });
+        });
+        // Mouse Down
+        $(".box").mousedown(function () {
+          $(".box").css({
+            backgroundColor: "blue",
+            borderRadius: "50px",
+            marginTop: "170px",
+          });
+        });
+        //Mouse leave
+        $(".box").mouseleave(function () {
+          $(".box").css({
+            backgroundColor: "grey",
+            borderRadius: "50px",
+            marginTop: "100px",
+          });
+        });
+        //Mouse Move
+        $(".box").mousemove(function () {
+          $(".box").css({
+            backgroundColor: "aqua",
+            borderRadius: "50px",
+            marginLeft: "800px",
+          });
+        });
+        //Mouse Out
+        $(".box").mouseout(function () {
+          $(".box").css({
+            backgroundColor: "chartreuse",
+            borderRadius: "50px",
+            marginLeft: "300px",
+          });
+        });
+
+        //Mouse Over
+        $(".box").mouseover(function () {
+          $(".box").css({
+            backgroundColor: "black",
+            borderRadius: "50px",
+            marginLeft: "600px",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
