@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Event</title>
+  </head>
+  <body>
+    <div class="Container">
+      <h1>Key Event</h1>
+
+      <div class="box"></div>
+    </div>
+
+    <!-- jQuery CDN is here -->
+    <script src="../00Js Library/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery CSS -->
+
+    <script>
+      $("body").css({
+        backgroundColor: "black",
+        color: "white",
+        textAlign: "center",
+      });
+
+      $(".box").css({
+        width: "300px",
+        height: "300px",
+        border: "3px solid white",
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        //Key Up
+
+        $(".box").keyup(function () {
+          $(".box").css({
+            borderRadius: "50px",
+            backgroundColor: "violet",
+            marginLeft: "500px",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
